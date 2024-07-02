@@ -1,0 +1,83 @@
+/* Column Container */
+.statusLine {
+  background-color: #1a374d;
+  border: 1px solid #9ad3bc;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 0 10px;
+  min-width: 250px;
+  max-width: 300px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.statusLine input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #9ad3bc;
+  border-radius: 4px;
+  font-size: 1rem;
+  color: #132743;
+  background-color: #f1f1f1;
+}
+
+.statusLine h3 {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  color: #edf285;
+}
+
+/* Buttons */
+.statusLine .button {
+  background-color: #9ad3bc;
+  border: none;
+  border-radius: 4px;
+  color: #132743;
+  font-size: 1.2rem;
+  padding: 8px 12px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.2s ease;
+}
+
+.statusLine .button.addTask {
+  background-color: #2ec1ac;
+  color: white;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.statusLine .button.deleteColumn {
+  background-color: #ff8282;
+  color: white;
+  font-size: 1rem;
+  border-radius: 4px;
+  padding: 6px 12px;
+  margin-bottom: 10px;
+}
+
+.statusLine .button:hover {
+  background-color: #edc988;
+}
+
+.statusLine .button.deleteColumn:hover {
+  background-color: #ff4c4c;
+}
+
+/* Tasks Container */
+.tasksContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  gap: 10px;
+}

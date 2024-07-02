@@ -1,0 +1,103 @@
+/* Task Container */
+.task {
+  background-color: #1a374d;
+  border: 1px solid #9ad3bc;
+  border-radius: 8px;
+  padding: 16px;
+  width: 100%;
+  box-sizing: border-box;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.task:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Task Title */
+.task h4 {
+  margin: 0 0 10px;
+  font-size: 1.2rem;
+  color: #edf285;
+}
+
+/* Task Description */
+.task p {
+  margin: 5px 0;
+  color: #eeecda;
+}
+
+/* Input Fields */
+.task input[type="text"],
+.task textarea,
+.task select {
+  width: 100%;
+  padding: 8px;
+  margin: 5px 0;
+  border: 1px solid #9ad3bc;
+  border-radius: 4px;
+  font-size: 1rem;
+  color: #132743;
+  background-color: #f1f1f1;
+}
+
+/* Placeholder Styling */
+.task input[type="text"]::placeholder,
+.task textarea::placeholder {
+  color: #9ad3bc;
+}
+
+/* Buttons */
+.task button {
+  background-color: #9ad3bc;
+  border: none;
+  border-radius: 4px;
+  color: #132743;
+  font-size: 1rem;
+  padding: 8px 12px;
+  cursor: pointer;
+  margin-right: 5px;
+  transition: background-color 0.2s ease;
+}
+
+.task button:hover {
+  background-color: #edc988;
+}
+
+/* Delete Button */
+.task .delete {
+  background-color: #ff8282;
+}
+
+.task .delete:hover {
+  background-color: #ff4c4c;
+}
+
+/* Editing Mode Styles */
+.task .editMode input[type="text"],
+.task .editMode textarea,
+.task .editMode select {
+  background-color: #ffffff;
+  color: #132743;
+}
+
+/* Save and Cancel Buttons */
+.task .editMode .save {
+  background-color: #2ec1ac;
+  color: #ffffff;
+}
+
+.task .editMode .cancel {
+  background-color: #ffa5a5;
+}
+
+.task .editMode .save:hover {
+  background-color: #24b08a;
+}
+
+.task .editMode .cancel:hover {
+  background-color: #ff8282;
+}
