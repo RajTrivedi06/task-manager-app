@@ -1,168 +1,111 @@
-/* Global Styles */
+/* Import Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+/* General Reset */
+* {
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
+
+/* Body styling */
 body {
-  font-family: "Arial", sans-serif;
-  background-color: #132743;
-  color: #eeecda;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  font-family: "Kanit", sans-serif; /* Set font family */
+  background-color: #132743; /* Set background color */
+  color: #eeecda; /* Set text color */
+  display: flex; /* Use flexbox layout */
+  flex-direction: column; /* Arrange children in a column */
+  align-items: center; /* Center align items horizontally */
+  text-align: center; /* Center align text */
 }
 
-.App {
-  text-align: center;
-}
-
+/* Main heading */
 h1 {
-  margin-top: 20px;
-  font-size: 2.5rem;
-  color: #edc988;
+  margin: 2rem 0; /* Add margin to the top and bottom */
+  font-weight: 400; /* Set font weight */
 }
 
+/* Main content area */
 main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 20px;
+  display: flex; /* Use flexbox layout */
+  flex-direction: column; /* Arrange children in a column */
+  border: 1px solid #9ad3bc; /* Set border color and width */
+  align-items: center; /* Center align items horizontally */
+  width: fit-content; /* Adjust width to fit the content */
 }
 
+/* Section containing columns */
 section {
-  display: flex;
-  justify-content: center;
-  width: 90%;
-  max-width: 1200px;
+  display: flex; /* Use flexbox layout */
+  width: 70rem; /* Set width */
+  margin-bottom: 2rem; /* Add margin to the bottom */
 }
 
-/* Column Styles */
-.column {
-  background-color: #1a374d;
-  border: 1px solid #9ad3bc;
-  border-radius: 8px;
-  padding: 16px;
-  margin: 0 10px;
-  min-width: 250px;
-  max-width: 300px;
+/* General button styling */
+.button {
+  border: 1px solid #edc988; /* Set border color and width */
+  text-transform: uppercase; /* Transform text to uppercase */
+  width: fit-content; /* Adjust width to fit the content */
+  padding: 0.3rem 1.5rem; /* Add padding inside the button */
+  background-color: #9ad3bc; /* Set background color */
+  border-color: #9ad3bc; /* Set border color */
+  color: #132743; /* Set text color */
+  font-weight: 500; /* Set font weight */
+  font-family: "Kanit", sans-serif; /* Set font family */
+  border-radius: 0.25rem; /* Round the corners */
+  font-size: 1rem; /* Set font size */
+  margin-right: 0.25rem; /* Add margin to the right */
+
+  /* Hover effect */
+  &:hover {
+    background-color: #2ec1ac; /* Change background color on hover */
+    border-color: #2ec1ac; /* Change border color on hover */
+    cursor: pointer; /* Change cursor to pointer on hover */
+  }
+
+  /* Focus effect */
+  &:focus {
+    outline: none; /* Remove outline */
+    border-color: #2ec1ac; /* Change border color on focus */
+    background-color: #2ec1ac; /* Change background color on focus */
+    color: #eeecda; /* Change text color on focus */
+  }
+
+  /* Styling for the add task button */
+  &.addTask {
+    font-size: 3rem; /* Set font size */
+    padding: 0 0 0.4rem 0; /* Adjust padding */
+    border-radius: 50%; /* Round the button to make it circular */
+    width: 2.5rem; /* Set width */
+    height: 2.5rem; /* Set height */
+    line-height: 1rem; /* Set line height */
+    margin-top: 2rem; /* Add margin to the top */
+  }
+
+  /* Styling for the move task button */
+  &.moveTask {
+    font-size: 1.5rem; /* Set font size */
+    padding: 0.5rem 0.5rem; /* Add padding */
+    margin-bottom: 0; /* Remove margin from the bottom */
+    line-height: 1rem; /* Set line height */
+  }
+
+  /* Styling for the delete button */
+  &.delete {
+    background-color: #ffa5a5; /* Set background color */
+    border-color: #ffa5a5; /* Set border color */
+
+    /* Hover effect for the delete button */
+    &:hover {
+      background-color: #ff8282; /* Change background color on hover */
+      border-color: #ff8282; /* Change border color on hover */
+    }
+  }
 }
 
-.column input[type="text"] {
-  width: 100%;
-  padding: 8px;
-  margin-bottom: 10px;
-  border: 1px solid #9ad3bc;
-  border-radius: 4px;
-  font-size: 1rem;
-  color: #132743;
-}
-
-.column h3 {
-  margin-bottom: 10px;
-  font-size: 1.5rem;
-  color: #edf285;
-}
-
-.column .button {
-  background-color: #9ad3bc;
-  border: none;
-  border-radius: 4px;
-  color: #132743;
-  font-size: 1.2rem;
-  padding: 8px 12px;
-  cursor: pointer;
-  margin-top: 10px;
-}
-
-.column .button.addTask {
-  background-color: #2ec1ac;
-  color: white;
-  font-size: 1.5rem;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.column .button:hover {
-  background-color: #edc988;
-}
-
-/* Task Styles */
-.task {
-  background-color: #132743;
-  border: 1px solid #eeecda;
-  border-radius: 4px;
-  padding: 10px;
-  margin-bottom: 10px;
-  text-align: left;
-}
-
-.task h4 {
-  margin: 0;
-  font-size: 1.2rem;
-  color: #edc988;
-}
-
-.task p {
-  margin: 5px 0;
-  color: #edf285;
-}
-
-.task input[type="text"],
-.task textarea,
-.task select {
-  width: calc(100% - 20px);
-  padding: 8px;
-  margin: 5px 0;
-  border: 1px solid #9ad3bc;
-  border-radius: 4px;
-  font-size: 1rem;
-  color: #132743;
-}
-
-.task button {
-  background-color: #9ad3bc;
-  border: none;
-  border-radius: 4px;
-  color: #132743;
-  font-size: 1rem;
-  padding: 6px 12px;
-  cursor: pointer;
-  margin-right: 5px;
-}
-
-.task button:hover {
-  background-color: #edc988;
-}
-
-.task .delete {
-  background-color: #ff8282;
-}
-
-.task .delete:hover {
-  background-color: #ff4c4c;
-}
-
-/* Add Column Button */
-button.addColumn {
-  background-color: #9ad3bc;
-  border: none;
-  border-radius: 4px;
-  color: #132743;
-  font-size: 1.2rem;
-  padding: 10px 20px;
-  cursor: pointer;
-  margin-top: 20px;
-}
-
-button.addColumn:hover {
-  background-color: #edc988;
-}
-
-/* Loading Text */
-p {
-  font-size: 1.2rem;
-  color: #edf285;
+/* Responsive design for screens smaller than 75rem */
+@media only screen and (max-width: 75rem) {
+  section {
+    width: 100%; /* Set width to 100% */
+    flex-direction: column; /* Arrange children in a column */
+  }
 }

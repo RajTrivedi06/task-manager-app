@@ -1,103 +1,109 @@
-/* Task Container */
+/* Container for each task */
 .task {
-  background-color: #1a374d;
-  border: 1px solid #9ad3bc;
-  border-radius: 8px;
-  padding: 16px;
-  width: 100%;
-  box-sizing: border-box;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  background-color: #1a374d; /* Set background color */
+  border: 1px solid #9ad3bc; /* Set border color and width */
+  border-radius: 8px; /* Round the corners */
+  padding: 16px; /* Add padding inside the task container */
+  width: 100%; /* Set width to 100% of the parent container */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth transition for transform and box-shadow */
+  display: flex; /* Use flexbox layout */
+  flex-direction: column; /* Arrange children in a column */
+  align-items: center; /* Center align items horizontally */
 }
 
+/* Task container hover effect */
 .task:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px); /* Slightly move the task up */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
 }
 
-/* Task Title */
+/* Style for the task title */
 .task h4 {
-  margin: 0 0 10px;
-  font-size: 1.2rem;
-  color: #edf285;
+  margin: 0 0 10px; /* Add margin to the bottom */
+  font-size: 1.2rem; /* Set font size */
+  color: #edf285; /* Set text color */
 }
 
-/* Task Description */
+/* Style for the task description and urgency */
 .task p {
-  margin: 5px 0;
-  color: #eeecda;
+  margin: 5px 0; /* Add margin to the top and bottom */
+  color: #eeecda; /* Set text color */
 }
 
-/* Input Fields */
+/* Style for input fields, textareas, and select dropdowns */
 .task input[type="text"],
 .task textarea,
 .task select {
-  width: 100%;
-  padding: 8px;
-  margin: 5px 0;
-  border: 1px solid #9ad3bc;
-  border-radius: 4px;
-  font-size: 1rem;
-  color: #132743;
-  background-color: #f1f1f1;
+  width: 100%; /* Set width to 100% of the parent container */
+  padding: 8px; /* Add padding inside the input fields */
+  margin: 5px 0; /* Add margin to the top and bottom */
+  border: 1px solid #9ad3bc; /* Set border color and width */
+  border-radius: 4px; /* Round the corners */
+  font-size: 1rem; /* Set font size */
+  color: #132743; /* Set text color */
+  background-color: #f1f1f1; /* Set background color */
 }
 
-/* Placeholder Styling */
+/* Placeholder text styling */
 .task input[type="text"]::placeholder,
 .task textarea::placeholder {
-  color: #9ad3bc;
+  color: #9ad3bc; /* Set placeholder text color */
 }
 
-/* Buttons */
+/* Style for buttons */
 .task button {
-  background-color: #9ad3bc;
-  border: none;
-  border-radius: 4px;
-  color: #132743;
-  font-size: 1rem;
-  padding: 8px 12px;
-  cursor: pointer;
-  margin-right: 5px;
-  transition: background-color 0.2s ease;
+  background-color: #9ad3bc; /* Set background color */
+  border: none; /* Remove border */
+  border-radius: 4px; /* Round the corners */
+  color: #132743; /* Set text color */
+  font-size: 1rem; /* Set font size */
+  padding: 8px 12px; /* Add padding inside the button */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  margin-right: 5px; /* Add margin to the right */
+  transition: background-color 0.2s ease; /* Smooth transition for background color */
 }
 
+/* Button hover effect */
 .task button:hover {
-  background-color: #edc988;
+  background-color: #edc988; /* Change background color on hover */
 }
 
-/* Delete Button */
+/* Style for the delete button */
 .task .delete {
-  background-color: #ff8282;
+  background-color: #ff8282; /* Set background color for delete button */
 }
 
+/* Delete button hover effect */
 .task .delete:hover {
-  background-color: #ff4c4c;
+  background-color: #ff4c4c; /* Change background color on hover */
 }
 
-/* Editing Mode Styles */
+/* Styles for input fields, textareas, and select dropdowns in edit mode */
 .task .editMode input[type="text"],
 .task .editMode textarea,
 .task .editMode select {
-  background-color: #ffffff;
-  color: #132743;
+  background-color: #ffffff; /* Set background color */
+  color: #132743; /* Set text color */
 }
 
-/* Save and Cancel Buttons */
+/* Style for save button in edit mode */
 .task .editMode .save {
-  background-color: #2ec1ac;
-  color: #ffffff;
+  background-color: #2ec1ac; /* Set background color */
+  color: #ffffff; /* Set text color */
 }
 
+/* Style for cancel button in edit mode */
 .task .editMode .cancel {
-  background-color: #ffa5a5;
+  background-color: #ffa5a5; /* Set background color */
 }
 
+/* Save button hover effect in edit mode */
 .task .editMode .save:hover {
-  background-color: #24b08a;
+  background-color: #24b08a; /* Change background color on hover */
 }
 
+/* Cancel button hover effect in edit mode */
 .task .editMode .cancel:hover {
-  background-color: #ff8282;
+  background-color: #ff8282; /* Change background color on hover */
 }
